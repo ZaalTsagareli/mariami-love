@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Special Website for You</title>
+    <style>
+      body {
+        font-family: "Arial", sans-serif;
+        background-color: #ffe6f2;
+        color: #333;
+        margin: 0;
+        padding: 0;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        height: 100vh;
+      }
+
+      #container {
+        text-align: center;
+        padding: 20px;
+        background-color: #fff;
+        border-radius: 10px;
+        box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
+        overflow: hidden;
+        max-width: 400px;
+        width: 100%;
+      }
+
+      h1 {
+        color: #ff69b4;
+        font-size: 28px;
+        margin-bottom: 10px;
+        letter-spacing: 1px;
+      }
+
+      p {
+        font-size: 18px;
+        line-height: 1.6;
+        margin-bottom: 20px;
+      }
+
+      #heart {
+        cursor: pointer;
+        font-size: 40px;
+        color: #ff69b4;
+        transition: transform 0.2s ease-in-out;
+      }
+
+      #heart:hover {
+        transform: scale(1.1);
+      }
+
+      #loveMessage {
+        font-size: 20px;
+        color: #ff69b4;
+        opacity: 0;
+        transition: opacity 0.5s ease-in-out;
+      }
+
+      #loveMessage.show {
+        opacity: 1;
+      }
+    </style>
+  </head>
+  <body>
+    <div id="container">
+      <h1>Hello, My Love!</h1>
+      <p>
+        I created this special website just for you. You mean the world to me,
+        and I wanted to express my feelings in a unique way.
+      </p>
+      <p>Click the heart below for a little surprise:</p>
+      <div id="heart" onclick="showLove()">&#10084;</div>
+      <p id="loveMessage">I love you more than words can say!</p>
+    </div>
+
+    <script>
+      function showLove() {
+        var loveMessage = document.getElementById("loveMessage");
+        loveMessage.classList.add("show");
+      }
+    </script>
+  </body>
+</html>
